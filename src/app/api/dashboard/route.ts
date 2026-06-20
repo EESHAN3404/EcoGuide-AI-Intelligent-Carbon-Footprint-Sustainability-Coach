@@ -25,7 +25,7 @@ export async function GET(req: Request) {
 
     const latestRecord = records[records.length - 1];
     
-    let recommendations = [];
+    let recommendations: any[] = [];
     if (latestRecord) {
       recommendations = getRecommendations(user, latestRecord);
     }

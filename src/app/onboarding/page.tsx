@@ -102,7 +102,7 @@ export default function OnboardingPage() {
               <h3 className="font-semibold text-lg">Travel & Energy</h3>
               <div className="space-y-2">
                 <Label>Primary Vehicle Type</Label>
-                <Select onValueChange={(v) => handleSelect('vehicleType', v)}>
+                <Select onValueChange={(v) => handleSelect('vehicleType', v as string)}>
                   <SelectTrigger><SelectValue placeholder="Select vehicle" /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Car">Car</SelectItem>
@@ -139,7 +139,7 @@ export default function OnboardingPage() {
               <h3 className="font-semibold text-lg">Diet & Waste</h3>
               <div className="space-y-2">
                 <Label>Diet Preference</Label>
-                <Select onValueChange={(v) => handleSelect('dietPreference', v)}>
+                <Select onValueChange={(v) => handleSelect('dietPreference', v as string)}>
                   <SelectTrigger><SelectValue placeholder="Select diet" /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Vegan">Vegan</SelectItem>
@@ -151,7 +151,7 @@ export default function OnboardingPage() {
               </div>
               <div className="space-y-2">
                 <Label>Recycling Habits</Label>
-                <Select onValueChange={(v) => handleSelect('recyclingHabits', v)}>
+                <Select onValueChange={(v) => handleSelect('recyclingHabits', v as string)}>
                   <SelectTrigger><SelectValue placeholder="Select habit" /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Poor">Poor (Rarely recycle)</SelectItem>
@@ -163,7 +163,7 @@ export default function OnboardingPage() {
               </div>
               <div className="space-y-2">
                 <Label>Plastic Usage</Label>
-                <Select onValueChange={(v) => handleSelect('plasticUsage', v)}>
+                <Select onValueChange={(v) => handleSelect('plasticUsage', v as string)}>
                   <SelectTrigger><SelectValue placeholder="Select usage" /></SelectTrigger>
                   <SelectContent>
                     <SelectItem value="Low">Low (Use reusables)</SelectItem>

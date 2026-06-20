@@ -47,7 +47,7 @@ export default function SimulatorPage() {
                   <div className="flex items-center gap-2"><Zap className="w-5 h-5 text-orange-500"/> Reduce AC Usage</div>
                   <Badge variant="secondary">{acReduction[0]} hours/day</Badge>
                 </div>
-                <Slider max={10} step={1} value={acReduction} onValueChange={setAcReduction} className="w-full" />
+                <Slider max={10} step={1} value={acReduction} onValueChange={(val) => setAcReduction(val as number[])} className="w-full" />
                 <p className="text-sm text-muted-foreground text-right">-{(acReduction[0] * CO2_PER_AC_HOUR).toFixed(1)} kg CO₂/mo</p>
               </div>
 
@@ -56,7 +56,7 @@ export default function SimulatorPage() {
                   <div className="flex items-center gap-2"><Car className="w-5 h-5 text-blue-500"/> Car-Free Days</div>
                   <Badge variant="secondary">{carReduction[0]} days/week</Badge>
                 </div>
-                <Slider max={7} step={1} value={carReduction} onValueChange={setCarReduction} className="w-full" />
+                <Slider max={7} step={1} value={carReduction} onValueChange={(val) => setCarReduction(val as number[])} className="w-full" />
                 <p className="text-sm text-muted-foreground text-right">-{(carReduction[0] * CO2_PER_CAR_DAY).toFixed(1)} kg CO₂/mo</p>
               </div>
 
@@ -65,7 +65,7 @@ export default function SimulatorPage() {
                   <div className="flex items-center gap-2"><Leaf className="w-5 h-5 text-emerald-500"/> Meat-Free Days</div>
                   <Badge variant="secondary">{meatReduction[0]} days/week</Badge>
                 </div>
-                <Slider max={7} step={1} value={meatReduction} onValueChange={setMeatReduction} className="w-full" />
+                <Slider max={7} step={1} value={meatReduction} onValueChange={(val) => setMeatReduction(val as number[])} className="w-full" />
                 <p className="text-sm text-muted-foreground text-right">-{(meatReduction[0] * CO2_PER_MEAT_DAY).toFixed(1)} kg CO₂/mo</p>
               </div>
 

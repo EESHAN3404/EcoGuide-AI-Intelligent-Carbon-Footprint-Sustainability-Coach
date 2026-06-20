@@ -20,9 +20,9 @@ export default function DashboardPage() {
 
   useEffect(() => {
     if (status === 'unauthenticated') router.push('/login');
-    if (session && !session.isOnboarded) router.push('/onboarding');
+    if (session && !(session as any).isOnboarded) router.push('/onboarding');
     
-    if (session?.isOnboarded) {
+    if ((session as any)?.isOnboarded) {
       fetch('/api/dashboard').then(res => res.json()).then(setData);
     }
   }, [session, status, router]);

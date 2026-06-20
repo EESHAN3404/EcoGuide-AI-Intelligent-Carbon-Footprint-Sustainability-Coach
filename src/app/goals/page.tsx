@@ -73,7 +73,7 @@ export default function GoalsPage() {
           <p className="text-muted-foreground">Set targets and track your progress to reduce your footprint.</p>
         </div>
         <Dialog open={open} onOpenChange={setOpen}>
-          <DialogTrigger asChild>
+          <DialogTrigger>
             <Button className="gap-2"><Plus className="w-4 h-4"/> New Goal</Button>
           </DialogTrigger>
           <DialogContent>
